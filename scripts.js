@@ -4,6 +4,7 @@ $("#showDetailsSubmit").click(function(){
     var showHost = $("#showHostInput").val();
     $("#showDetailsDiv").empty();
     $("#showDetailsDiv").load("addShowDetails.php?showName="+showName+"&showHost="+showHost);
+    return false;
 })
 
 
