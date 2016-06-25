@@ -1,3 +1,6 @@
+<?php
+include_once("class.RSRData.php");
+?>
 <html>
 <head>
     <title>Radio Show Review System</title>
