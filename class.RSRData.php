@@ -51,6 +51,17 @@ class RSRData
         return $this->showsCollection->find();
     }
 
+    /**
+     * Get existing data for the document
+     * with the supplied id
+     * @param $id
+     * @return array|null
+     */
+    public function getExistingShowData($id)
+    {
+        return $this->showsCollection->findOne(array('_id' => new MongoId($id)));
+    }
+
 
 
 }
