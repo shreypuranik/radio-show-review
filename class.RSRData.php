@@ -41,4 +41,16 @@ class RSRData
         $this->showsCollection->insert($doc);
     }
 
+    /**
+     * Retrieve all the shows in the 'shows'
+     * collection
+     * @return MongoCursor
+     */
+    public function getAvailableShowsForReview()
+    {
+        return $this->showsCollection->find();
+    }
+
+
+
 }
