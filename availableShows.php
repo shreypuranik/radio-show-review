@@ -39,7 +39,7 @@ include_once("class.RSRData.php");
 </div>
 <div class="container">
     <div class="row" id="showDetailsDiv">
-
+<p>Available shows for review: </p>
         <table class="table">
             <thead class="thead-inverse">
             <tr>
