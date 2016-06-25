@@ -171,6 +171,19 @@ EOD;
   </div>
   <div class="panel-body">
  <p>Running a radio station can be hard work, especially when there are lots of shows to maintain.This tool allows you to store reviews of shows from your station.</p>
+ <p>On this version of the tool, you can:</p>
+ <ul>
+ <li><a href="index.php?page=add-shows">Add a new show to be reviewed</a></li>
+ <li><a href="index.php?page=view-shows">Review an existing show that's in the system</a></li>
+ </ul>
+                </div>
+</div>
+    <div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">The technical bit</h3>
+  </div>
+  <div class="panel-body">
+ <p>This application runs using PHP, and MongoDB. You will need to have both of these installed on your server. I've tried to make this as accessible as possible, but feel free to submit a <a href="https://github.com/shreypuranik/radio-show-review">pull request on GitHub</a>. </p>
                 </div>
 </div>
 </div>
