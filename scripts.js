@@ -4,7 +4,7 @@ $("#showDetailsSubmit").click(function(){
     var showHostInput = $("#showHostInput").val();
     $.post( "addShowDetails.php", { showName: showNameInput, showHost: showHostInput })
         .done(function( data ) {
-            alert( "Data Loaded: " + data );
+            $("#showDetailsDiv").html(data);
         });
     return false;
 })
