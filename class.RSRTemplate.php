@@ -75,7 +75,7 @@ class RSRTemplate
 
 <div class="row headline">
     <div class="page-header">
-        <h1><span style="color:#003300;">Improve your station sound</span> <small>with feedback that matters</small></h1>
+        <h1><span style="color:#003300;">Improve your station</span> <small>with feedback that matters</small></h1>
     </div>
 </div>
 EOD;
