@@ -43,7 +43,6 @@ include_once("class.RSRData.php");
         <table class="table">
             <thead class="thead-inverse">
             <tr>
-                <th>#</th>
                 <th>Show Name</th>
                 <th>Show Hosts</th>
                 <th>Link</th>
