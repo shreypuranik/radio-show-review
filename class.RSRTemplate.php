@@ -55,7 +55,7 @@ class RSRTemplate
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="#">Radio Show Reviews</a>
+            <a class="navbar-brand" href="index.php">Radio Show Reviews</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -93,9 +93,6 @@ EOD;
 
         switch($_GET['page'])
         {
-            case "home":
-
-                break;
             case "add-shows":
                 $html =<<<EOD
                 <div class="container">
@@ -164,7 +161,25 @@ EOD;
 </div>
 EOD;
                 break;
+            default:
+                $html =<<<EOD
+                               <div class="container">
+    <div class="row" id="showDetailsDiv">
+    <div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">The idea...</h3>
+  </div>
+  <div class="panel-body">
+ <p>Running a radio station can be hard work, especially when there are lots of shows to maintain.This tool allows you to store reviews of shows from your station.</p>
+                </div>
+</div>
+</div>
+</div>
+EOD;
+
+
         }
+
 
         return $html;
     }
