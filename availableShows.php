@@ -36,19 +36,36 @@
 </div>
 <div class="container">
     <div class="row" id="showDetailsDiv">
+<?php
+$r = new RSRData();
+$datas = $r->getAvailableShowsForReview();
+
+foreach($datas as $id => $value){
+    $showName = $value['showName'];
+    $showHost = $value['showHost'];
+    $id = $value['_id']->id;
+
+    echo $showName." -- -- ".$showHost." -- -- ".$id;
+    echo "<br />";
+}
+
+
+
+
+?>
     </div>
+</div>
 
 
-    <div class="row footer">
-        <div class="col-sm-6 ">
-            <span>&nbsp; Built with love, using PHP &amp; MongoDB</span>
-        </div>
-        <div class="col-sm-3">
+<div class="row footer">
+    <div class="col-sm-6 ">
+        <span>&nbsp; Built with love, using PHP &amp; MongoDB</span>
+    </div>
+    <div class="col-sm-3">
 
-        </div>
-        <div class="col-sm-3 ">
-            <span>&nbsp; Pull requests welcome. Fork me on <a href="https://github.com/shreypuranik/radio-show-review" target="_blank">GitHub</a>.</span>
-        </div>
+    </div>
+    <div class="col-sm-3 ">
+        <span>&nbsp; Pull requests welcome. Fork me on <a href="https://github.com/shreypuranik/radio-show-review" target="_blank">GitHub</a>.</span>
     </div>
 </div>
 

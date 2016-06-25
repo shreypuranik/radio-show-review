@@ -22,7 +22,7 @@ class RSRData
         $connection = new \MongoClient(); //localhost 27017
         //database connection
         $this->db = $connection->rsr;
-        $this->showsCollection = $banksData = $this->db->shows;
+        $this->showsCollection = $this->db->shows;
     }
 
     /**
