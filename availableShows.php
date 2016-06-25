@@ -39,6 +39,18 @@ include_once("class.RSRData.php");
 </div>
 <div class="container">
     <div class="row" id="showDetailsDiv">
+
+        <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+                <th>#</th>
+                <th>Show Name</th>
+                <th>Show Hosts</th>
+                <th>Link</th>
+            </tr>
+            </thead>
+            <tbody>
+
 <?php
 $r = new RSRData();
 $datas = $r->getAvailableShowsForReview();
@@ -48,14 +60,17 @@ foreach($datas as $id => $value){
     $showHost = $value['showHost'];
     $id = $value['_id']->id;
 
-    echo $showName." -- -- ".$showHost." -- -- ".$id;
-    echo "<br />";
+    echo "<tr>";
+    echo "<td>".$showName."</td>";
+    echo "<td>".$showHost."</td>";
+    echo "<td><a href='viewShow.php?id=".$id."'>More info</a></td>";
+    echo "</tr>";
+
 }
 
-
-
-
 ?>
+            </tbody>
+            </table>
     </div>
 </div>
 
