@@ -57,7 +57,7 @@ $datas = $r->getAvailableShowsForReview();
 foreach($datas as $id => $value){
     $showName = $value['showName'];
     $showHost = $value['showHost'];
-    $id = $value['_id']->id;
+    $id = (string)$value['_id'];
 
     echo "<tr>";
     echo "<td>".$showName."</td>";
