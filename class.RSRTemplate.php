@@ -1,4 +1,6 @@
 <?php
+
+
 include_once("class.RSRData.php");
 /**
  * Class RSRTemplate
@@ -238,7 +240,46 @@ EOD;
         $showID = $_GET['id'];
         $rsrData = new RSRData();
         $showData = $rsrData->getExistingShowData($showID);
-        $html = var_dump($showData);
+
+        $showAddition = date("d M Y@", $showData['date']);
+
+        $html = <<<EOD
+                <div class="container">
+<div class="row" id="showDetailsDiv">
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-7">
+<br />
+<h3>Show Review for {$showData['showName']}</h3>
+    <form>
+        <fieldset class="form-group">
+            <label for="exampleInputEmail1">Your name</label>
+            <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name (eg Gary)">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="exampleInputEmail1">Your review</label>
+            <textarea class="form-control bs_input" rows="5" id="showReview" name="showReview"></textarea>
+        </fieldset>
+
+
+
+
+        <button type="submit" id="showReviewSubmit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+    <div class="col-sm-3 pageSideBlurb">
+        <br />
+        <ul>
+        <li>Show added on {$showAddition} </li>
+        <li>Show hosts/personalities: {$showData['showHost']}</li>
+        <li>X reviews to date</li>
+        </ul>
+</div>
+</div>
+</div>
+EOD;
+
+        //$html = var_dump($showData);
         return $html;
     }
 }
