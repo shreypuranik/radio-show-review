@@ -11,10 +11,10 @@ $("#showDetailsSubmit").click(function(){
 
     $("#showReviewSubmit").click(function(){
         var showNameInput = $("#showName").val();
-        var showHostInput = $("#showReviewInput").val();
+        var showReviewInput = $("#showReviewInput").val();
         var reviewerNameInput = $("#reviewerNameInput").val();
 
-    $.post( "addShowReview.php", { showName: showNameInput, showHost: showHostInput })
+    $.post( "addShowReview.php", { showName: showNameInput, showReview: showReviewInput, reviewerName: reviewerNameInput })
             .done(function( data ) {
                 $("#showDetailsDiv").html(data);
             });
