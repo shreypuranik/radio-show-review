@@ -44,7 +44,7 @@ class RSRTemplate
         .page-header{
             text-align:center;
         }
-        .options{
+        .options a {
         color: white;
         }
 
@@ -139,7 +139,7 @@ EOD;
             <tr>
                 <th>Show Name</th>
                 <th>Show Hosts</th>
-                <th>Link</th>
+                <th>Feedback</th>
             </tr>
             </thead>
             <tbody>
