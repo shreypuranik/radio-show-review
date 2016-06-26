@@ -9,5 +9,16 @@ $("#showDetailsSubmit").click(function(){
     return false;
 })
 
+    $("#showReviewSubmit").click(function(){
+        var showNameInput = $("#showName").val();
+        var showHostInput = $("#showReviewInput").val();
+        var reviewerNameInput = $("#reviewerNameInput").val();
 
+    $.post( "addShowReview.php", { showName: showNameInput, showHost: showHostInput })
+            .done(function( data ) {
+                $("#showDetailsDiv").html(data);
+            });
+
+        return false;
+    })
 })

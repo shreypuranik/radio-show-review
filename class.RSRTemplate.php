@@ -241,7 +241,8 @@ EOD;
         $rsrData = new RSRData();
         $showData = $rsrData->getExistingShowData($showID);
 
-        $showAddition = date("d M Y@", $showData['date']);
+        $showAddition = date("d M Y", $showData['date']);
+
 
         $html = <<<EOD
                 <div class="container">
@@ -252,13 +253,14 @@ EOD;
 <br />
 <h3>Show Review for {$showData['showName']}</h3>
     <form>
+    <input type="hidden" name="showName" id="showName" value="{$showData['showName']}" />
         <fieldset class="form-group">
             <label for="exampleInputEmail1">Your name</label>
-            <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name (eg Gary)">
+            <input type="text" class="form-control" id="reviewerNameInput" placeholder="Enter your name (eg Gary)">
         </fieldset>
         <fieldset class="form-group">
             <label for="exampleInputEmail1">Your review</label>
-            <textarea class="form-control bs_input" rows="5" id="showReview" name="showReview"></textarea>
+            <textarea class="form-control bs_input" rows="5" id="showReviewInput" name="showReview"></textarea>
         </fieldset>
 
 
