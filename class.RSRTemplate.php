@@ -243,6 +243,26 @@ EOD;
 
         $showAddition = date("d M Y", $showData['date']);
 
+        $showReviewHTML = "";
+
+        if (!empty($showData['showReview'])
+            && !empty($showData['reviewerName']))
+        {
+            $reviewTime = date("d M Y", $showData['reviewTime']);
+            $showReviewHTML =<<<EOD
+
+              <div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">{$showData['reviewerName']} said on {$reviewTime}...</h3>
+  </div>
+  <div class="panel-body">
+ <p>{$showData['showReview']}</p>
+
+                </div>
+EOD;
+
+        }
+
 
         $html = <<<EOD
                 <div class="container">
@@ -278,10 +298,10 @@ EOD;
         </ul>
 </div>
 </div>
+{$showReviewHTML}
 </div>
 EOD;
 
-        //$html = var_dump($showData);
         return $html;
     }
 }
