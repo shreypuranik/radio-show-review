@@ -44,6 +44,9 @@ class RSRTemplate
         .page-header{
             text-align:center;
         }
+        .options{
+        color: white;
+        }
 
 
     </style>
@@ -149,7 +152,7 @@ EOD;
                     $html .="<tr>";
                     $html .= "<td>".$showName."</td>";
                     $html .= "<td>".$showHost."</td>";
-                    $html .= "<td><a href='viewShow.php?id=".$id."'>More info</a></td>";
+                    $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='viewShow.php?id=".$id."'>More info</a></button></td>";
                     $html .= "</tr>";
 
                 }
