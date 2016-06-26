@@ -17,6 +17,7 @@ $("#showDetailsSubmit").click(function(){
     $.post( "addShowReview.php", { showName: showNameInput, showReview: showReviewInput, reviewerName: reviewerNameInput })
             .done(function( data ) {
                 $("#showDetailsDiv").html(data);
+                $("#currentReview").hide(); 
             });
 
         return false;

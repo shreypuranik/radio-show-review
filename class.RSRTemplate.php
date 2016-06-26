@@ -251,13 +251,14 @@ EOD;
             $reviewTime = date("d M Y", $showData['reviewTime']);
             $showReviewHTML =<<<EOD
 
-              <div class="panel panel-success">
+              <div class="panel panel-warning" id="currentReview">
   <div class="panel-heading">
     <h3 class="panel-title">{$showData['showReviewer']} said on {$reviewTime}...</h3>
   </div>
   <div class="panel-body">
  <p>{$showData['showReview']}</p>
 
+                </div>
                 </div>
 EOD;
 
