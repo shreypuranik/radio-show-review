@@ -229,6 +229,18 @@ EOD;
         return $html;
 
     }
+
+    /**
+     * Return the show view
+     */
+    public static function getShowView()
+    {
+        $showID = $_GET['id'];
+        $rsrData = new RSRData();
+        $showData = $rsrData->getExistingShowData($showID);
+        $html = var_dump($showData);
+        return $html;
+    }
 }
 
 
