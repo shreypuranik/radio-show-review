@@ -62,6 +62,19 @@ class RSRData
         return $this->showsCollection->findOne(array('_id' => new MongoId($id)));
     }
 
+    /**
+     * Update Show Review
+     * @param $showReview
+     * @param $reviewerName
+     * @param $showName
+     */
+    public function updateShowReview($reviewerName, $showReview, $showName)
+    {
+
+        $newdata = array('$set' => array("showReview" => $showReview, "showReviewer" => $reviewerName, "reviewTime" => time()));
+        $this->showsCollection->update(array("showName" => $showName), $newdata);
+    }
+
 
 
 }
