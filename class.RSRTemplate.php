@@ -36,8 +36,9 @@ class RSRTemplate
             width: 65%;
         }
         .footer{
-            background: #2c2d2e;
+            background: #003300;
             color: white;
+            padding: 40px 0;
         }
 
         .pageSideBlurb{
@@ -49,6 +50,7 @@ class RSRTemplate
         .options a {
         color: white;
         }
+
 
 
     </style>
