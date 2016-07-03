@@ -22,7 +22,9 @@ class RSRData
         $connection = new \MongoClient(); //localhost 27017
         //database connection
         $this->db = $connection->rsr;
-        $this->showsCollection = $this->db->shows;
+        $dateString = date("Y-m-d");
+        $showCollectionName="shows_".$dateString;
+        $this->showsCollection = $this->db->$showCollectionName;
     }
 
     /**
