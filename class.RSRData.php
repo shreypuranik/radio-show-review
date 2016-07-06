@@ -104,6 +104,19 @@ class RSRData
         return $collectionDates;
     }
 
+    /**
+     * Get all data for
+     * the collection for that date
+     * @param $date
+     * @return MongoCursor
+     */
+    public function getShowsForDate($date)
+    {
+        $collectionName = "shows_".$date;
+        return $this->db->$collectionName->find();
+
+    }
+
 
 
 

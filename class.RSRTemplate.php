@@ -349,7 +349,43 @@ EOD;
      */
     public static function getShowsForDate($date)
     {
-        return "";
+        $RSRData= new RSRData();
+        $datas = $RSRData->getShowsForDate($date);
+        $html =<<<EOD
+                <div class="container">
+    <div class="row" id="showDetailsDiv">
+<p>Available shows for review: </p>
+        <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+                <th>Show Name</th>
+                <th>Show Hosts</th>
+                <th>Feedback</th>
+            </tr>
+            </thead>
+            <tbody>
+EOD;
+        foreach($datas as $id => $value){
+            $showName = $value['showName'];
+            $showHost = $value['showHost'];
+            $id = (string)$value['_id'];
+
+            $html .="<tr>";
+            $html .= "<td>".$showName."</td>";
+            $html .= "<td>".$showHost."</td>";
+            $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='viewShow.php?id=".$id."'>More info</a></button></td>";
+            $html .= "</tr>";
+
+        }
+
+        $html .=<<<EOD
+                            </tbody>
+            </table>
+    </div>
+</div>
+EOD;
+
+        return $html;
     }
 }
 
