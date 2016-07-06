@@ -87,6 +87,26 @@ class RSRData
         return $this->db->listCollections();
     }
 
+    /**
+     * Get back the collection names (using date)
+     * using the available data in the database
+     * @return array
+     */
+    public function getAvailableCollectionDates()
+    {
+        $collectionDates = array();
+        $collections = $this->getAvailableCollectionsRaw();
+        foreach($collections as $c){
+            $collectionData = explode("rsr.shows_", $c);
+            $collectionDates[] = $collectionData[1];
+        }
+
+        return $collectionDates;
+    }
+
+
+
+
 
 
 }
