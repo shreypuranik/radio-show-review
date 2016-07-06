@@ -71,7 +71,7 @@ class RSRTemplate
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.php?page=home">Home</a></li>
                 <li><a href="index.php?page=add-shows">Add shows</a></li>
-                <li><a href="index.php?page=view-shows">View shows</a></li>
+                <li><a href="index.php?page=view-shows">View today's shows</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
