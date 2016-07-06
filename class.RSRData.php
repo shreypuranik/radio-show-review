@@ -77,6 +77,16 @@ class RSRData
         $this->showsCollection->update(array("showName" => $showName), $newdata);
     }
 
+    /**
+     * Get back all collections stored
+     * in this database
+     * @return array
+     */
+    public function getAvailableCollectionsRaw()
+    {
+        return $this->db->listCollections();
+    }
+
 
 
 }
