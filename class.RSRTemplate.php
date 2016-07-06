@@ -131,6 +131,39 @@ EOD;
 </div>
 EOD;
                 break;
+            case "view-history":
+                $r = new RSRData();
+                $datas = $r->getAvailableCollectionDates();
+                $html =<<<EOD
+                <div class="container">
+    <div class="row" id="showDetailsDiv">
+<p>Available shows for review: </p>
+        <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+                <th>Date (YYYMMDD)</th>
+                <th>More Info</th>
+            </tr>
+            </thead>
+            <tbody>
+EOD;
+                foreach($datas as $date){
+
+                    $html .="<tr>";
+                    $html .= "<td>".$date."</td>";
+                    $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='index.php'>More info</a></button></td>";
+                    $html .= "</tr>";
+
+                }
+
+                $html .=<<<EOD
+                            </tbody>
+            </table>
+    </div>
+</div>
+EOD;
+
+                break;
             case "view-shows":
                 $r = new RSRData();
                 $datas = $r->getAvailableShowsForReview();
