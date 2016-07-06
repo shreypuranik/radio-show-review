@@ -274,7 +274,8 @@ EOD;
     {
         $showID = $_GET['id'];
         $rsrData = new RSRData();
-        $showData = $rsrData->getExistingShowData($showID);
+        $date = (isset($_GET['date']) ? $_GET['date']: '');
+        $showData = $rsrData->getExistingShowData($showID, $date);
 
         $showAddition = date("d M Y", $showData['date']);
 
@@ -373,7 +374,7 @@ EOD;
             $html .="<tr>";
             $html .= "<td>".$showName."</td>";
             $html .= "<td>".$showHost."</td>";
-            $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='viewShow.php?id=".$id."'>More info</a></button></td>";
+            $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='viewShow.php?id=".$id."&date=".$date."'>More info</a></button></td>";
             $html .= "</tr>";
 
         }

@@ -59,9 +59,15 @@ class RSRData
      * @param $id
      * @return array|null
      */
-    public function getExistingShowData($id)
+    public function getExistingShowData($id, $date)
     {
-        return $this->showsCollection->findOne(array('_id' => new MongoId($id)));
+        if (!empty($date)){
+            $collectionName = "shows_".$date;
+            return $this->db->$collectionName->findOne(array('_id' => new MongoId($id)));
+        }
+        else {
+            return $this->showsCollection->findOne(array('_id' => new MongoId($id)));
+        }
     }
 
     /**
