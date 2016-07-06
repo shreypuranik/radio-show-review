@@ -152,9 +152,10 @@ EOD;
             <tbody>
 EOD;
                 foreach($datas as $date){
-
+                    $time = strtotime($date);
+                    $dateFormat = date("l jS F Y", $time);
                     $html .="<tr>";
-                    $html .= "<td>".$date."</td>";
+                    $html .= "<td>".$dateFormat."</td>";
                     $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='viewPastReviews.php?date=".$date."'>More info</a></button></td>";
                     $html .= "</tr>";
 
