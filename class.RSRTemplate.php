@@ -50,6 +50,9 @@ class RSRTemplate
         .options a {
         color: white;
         }
+        .hide-form{
+        display:none;
+        }
 
 
 
@@ -279,6 +282,11 @@ EOD;
 
         $showAddition = date("d M Y", $showData['date']);
 
+        $formClassHTML = "";
+
+        if (!empty($date)){
+            $formClassHTML = "class='hide-form'";
+        }
         $showReviewHTML = "";
 
         if (!empty($showData['showReview'])
@@ -309,7 +317,7 @@ EOD;
     <div class="col-sm-7">
 <br />
 <h3>Show Review for {$showData['showName']}</h3>
-    <form>
+    <form  {$formClassHTML}>
     <input type="hidden" name="showName" id="showName" value="{$showData['showName']}" />
         <fieldset class="form-group">
             <label for="exampleInputEmail1">Your name</label>
