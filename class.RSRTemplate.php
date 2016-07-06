@@ -141,11 +141,11 @@ EOD;
                 $html =<<<EOD
                 <div class="container">
     <div class="row" id="showDetailsDiv">
-<p>Available shows for review: </p>
+<p>Available dates with submitted show content (archive) </p>
         <table class="table">
             <thead class="thead-inverse">
             <tr>
-                <th>Date (YYYMMDD)</th>
+                <th>Date</th>
                 <th>More Info</th>
             </tr>
             </thead>
