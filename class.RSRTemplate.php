@@ -75,6 +75,7 @@ class RSRTemplate
                 <li><a href="index.php?page=home">Home</a></li>
                 <li><a href="index.php?page=add-shows">Add shows</a></li>
                 <li><a href="index.php?page=view-shows">View today's shows</a></li>
+                <li><a href="index.php?page=view-history">View past show reviews</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -217,7 +218,8 @@ EOD;
  <p>On this version of the tool, you can:</p>
  <ul>
  <li><a href="index.php?page=add-shows">Add a new show to be reviewed</a></li>
- <li><a href="index.php?page=view-shows">Review an existing show that's in the system</a></li>
+ <li><a href="index.php?page=view-shows">Review an existing show that's in the system and was added today</a></li>
+ <li><a href="index.php?page=view-history">Read past show reviews</a></li>
  </ul>
                 </div>
 </div>
