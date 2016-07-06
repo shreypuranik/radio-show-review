@@ -151,7 +151,7 @@ EOD;
 
                     $html .="<tr>";
                     $html .= "<td>".$date."</td>";
-                    $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='index.php'>More info</a></button></td>";
+                    $html .= "<td><button type='button' class='btn btn-primary btn-sm options'><a href='viewPastReviews.php?date=".$date."'>More info</a></button></td>";
                     $html .= "</tr>";
 
                 }
