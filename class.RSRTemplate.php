@@ -340,6 +340,17 @@ EOD;
 
         return $html;
     }
+
+    /**
+     * Get back the HTML for shows for
+     * a supplied date
+     * @param $date
+     * @return string
+     */
+    public static function getShowsForDate($date)
+    {
+        return "";
+    }
 }
 
 
