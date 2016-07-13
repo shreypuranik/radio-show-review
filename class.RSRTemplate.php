@@ -38,7 +38,7 @@ class RSRTemplate
         .footer{
             background: #003300;
             color: white;
-            padding: 40px 0;
+            padding: 15px 0;
         }
 
         .pageSideBlurb{
